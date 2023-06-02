@@ -36,7 +36,7 @@ dismissButton.addEventListener('click', function(){
 const vibrate = () => {
     setTimeout(() => {
         input.classList.add('vibrate')
-      }, "1000");
+      }, "100");
 
       setTimeout(() => {
         input.classList.remove('vibrate')
