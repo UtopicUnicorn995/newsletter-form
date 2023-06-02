@@ -23,6 +23,7 @@ formButton.addEventListener('click', function(e) {
         successEmail.innerText = input.value
         main.classList.add('d-none')
         success.classList.remove('d-none')
+        checkEmail(input)
     }
 
 })
@@ -40,4 +41,10 @@ const vibrate = () => {
       setTimeout(() => {
         input.classList.remove('vibrate')
       }, "2000");
+}
+
+const checkEmail = (validity) =>{
+    if(validity.value.match(validRegex) && form.classList.contains('error')){
+        form.classList.remove('error')
+    }
 }
