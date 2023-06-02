@@ -78,7 +78,7 @@ main .desktop-img{
 
 .content ul li:before{
     content: ' ';
-    background: url(/assets/images/icon-list.svg) left center no-repeat;
+    background: url(./assets/images/icon-list.svg) left center no-repeat;
     height: 23px;
     width: 23px;
     display: block;
