@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --primary: rgb(255, 98, 87);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: #fff
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    font-size: 16px;
+    
+}
+
+.d-none{
+    display: none !important;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+main img{
+    max-height: 350px;
+}
+
+main .desktop-img{
+    display: none;
+}
+
+
+.content{
+    padding: 36px 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.content .description{
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.content ul{
+    list-style-type: none;
+    margin-bottom: 22px;
+}
+
+.content ul li{
+    margin-bottom: 10px;
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    line-height: 1.5;
+    
+}
+
+.content ul li:before{
+    content: ' ';
+    background: url(/assets/images/icon-list.svg) left center no-repeat;
+    height: 23px;
+    width: 23px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.content form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.content form .form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content form .label-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content form .form-label{
+    font-size: 12px;
+}
+
+.content form .form-error{
+    display: none;
+}
+
+.content form.error .form-error{
+    display: block;
+    color: var(--primary);
+}
+
+.content form .form-email{
+    height: 55px;
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.content form.error .form-email, .content form.error .form-email:focus{
+    background-color: rgba(255, 98, 87, 0.2);
+    border: 1px solid var(--primary);
+    color: var(--charcoal-grey);
+}
+
+.content form.error .form-email::placeholder{
+    color: #ff6257;
+}
+
+button{
+    height: 57px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    transition: background-color 0.2s linear;
+}
+
+button:hover{
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+    background-color: #ff6257;
+    box-shadow: 0px 0px 5px 0px rgba(255,98,87,0.67);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255,98,87,0.67);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(255,98,87,0.67);
+}
+
+.vibrate{
+    animation: shake 1s ;
+}
+
+@keyframes shake {
+    0% { transform: translate(30px); }
+    20% { transform: translate(-30px); }
+    40% { transform: translate(15px); }
+    60% { transform: translate(-15px); }
+    80% { transform: translate(8px); }
+    100% { transform: translate(0px); }
+}
+
+.success{
+    height: 100%;
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.success-text{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 20px;
+    padding-bottom: 155px;
+
+}
+
+.success-text h3{
+    font-size: 40px;
+    line-height: 1;
+}
+
+.success-text p {
+    line-height: 1.5;
+}
+
+.success-text img {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 490px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--charcoal-grey);
+    }
+}
+
+@media (min-width: 750px) {
+    main{
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 24px 24px;
+        border-radius: 35px;
+        gap: 55px;
+    }
+
+    main .mobile-img{
+        display: none;
+    }
+
+    main .desktop-img{
+        display: block;
+        
+    }
+
+    main img{
+        max-height: none;
+    }
+
+    main .content{
+        max-width: 425px;
+        padding: 36px 0 36px 36px;
+    }
+
+    main .content h1{
+        font-size: 57px;
+    }
+
+    .success{
+        max-height: 520px;
+        max-width: 502px;
+        padding: 48px 64px 64px 64px;
+        gap: 0;
+    }
+
+    .success-text{
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+    
+    .success-text h3{
+        font-size: 56px;
+    }
+
+    .success button{
+        width: 100%;
+    }
+}
+

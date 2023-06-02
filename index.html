@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="normal">
+  <img class="mobile-img" src="/assets/images/illustration-sign-up-mobile.svg" alt="">
+  <img class="desktop-img" src="/assets/images/illustration-sign-up-desktop.svg" alt="">
+  <div class="content">
+    <h1>
+      Stay updated!
+    </h1>
+    <p class="description">
+      Join 60,000+ product managers receiving monthly updates on:
+    </p>
+    <ul>
+      <li>
+        Product discovery and building what matters
+      </li>
+      <li>
+        Measuring to ensure updates are a success
+      </li>
+      <li>
+        And much more!
+      </li>
+    </ul>
+    <form class="">
+      <div class="form-group">
+        <div class="label-container">
+          <label class="form-label">
+            Email address
+          </label>
+          <label class="form-label form-error">
+            Valid email required
+          </label>
+        </div>
+        <input type="email" class="form-email" placeholder="  email@company.com">
+      </div>
+      <button class="form-button">
+        Subscribe to monthly newsletter
+      </button>
+    </form>
+  </div>
+</main>
+
+
+  
+
+<main class="success d-none">
+  <div class="success-text">
+    <img src="./assets/images/icon-success.svg" alt="">
+    <h3>
+      Thanks for subscribing!
+    </h3>
+    <p>
+      A confirmation email has been sent to <span class="success-email"></span>. 
+      Please open it and click the button inside to confirm your subscription.
+    </p>
+  </div>
+
+  <button class="dismiss-button">
+    Dismiss message
+  </button>
+</main>
+ 
+  <script src="app.js"></script>
+</body>
+</html>
